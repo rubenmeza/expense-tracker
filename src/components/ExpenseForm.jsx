@@ -4,6 +4,7 @@ import { useState } from 'react'
 const ExpenseForm = (props) => {
 	const {
 		onAddExpense,
+		onCancel,
 	} = props
 
 	const [expense, setExpense] = useState({
@@ -64,6 +65,7 @@ const ExpenseForm = (props) => {
 				</div>
 			</div>
 			<div className='new_expense__actions'>
+				<button type='button' onClick={onCancel}>Cancel</button>
 				<button type='submit'>Add Expense</button>
 			</div>
 		</form>
